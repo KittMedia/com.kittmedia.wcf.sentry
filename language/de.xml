@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="https://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.woltlab.com https://www.woltlab.com/XSD/tornado/language.xsd" languagecode="de">
+	<category name="wcf.acp.option">
+		<item name="wcf.acp.option.category.general.sentry"><![CDATA[Sentry]]></item>
+		<item name="wcf.acp.option.sentry_dsn"><![CDATA[DSN]]></item>
+		<item name="wcf.acp.option.sentry_env"><![CDATA[Umgebung]]></item>
+		<item name="wcf.acp.option.sentry_include_user_context"><![CDATA[Benutzer-Kontext übertragen]]></item>
+		<item name="wcf.acp.option.sentry_include_user_context.description"><![CDATA[Kann sensible Daten beinhalten.]]></item>
+	</category>
+</language>

@@ -1,0 +1,9 @@
+{
+    "config": {
+        "vendor-dir": "files/system/api/sentry"
+    },
+    "require": {
+        "sentry/sentry": "^2.3",
+        "php-http/httplug-pack": "^1.2"
+    }
+}

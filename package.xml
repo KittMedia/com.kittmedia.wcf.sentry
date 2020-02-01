@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="com.kittmedia.wcf.sentry" xmlns="https://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.woltlab.com https://www.woltlab.com/XSD/tornado/package.xsd">
+	<packageinformation>
+		<packagename>Sentry Integration</packagename>
+		<packagename language="de">Sentry-Integration</packagename>
+		<packagedescription><![CDATA[Connect your WoltLab Suite to a Sentry instance.]]></packagedescription>
+		<packagedescription language="de"><![CDATA[Verbinde deine WoltLab Suite mit einer Sentry-Instanz.]]></packagedescription>
+		<version>1.0.0 Beta 1</version>
+		<date>2020-02-01</date>
+	</packageinformation>
+	
+	<authorinformation>
+		<author><![CDATA[KittMedia]]></author>
+		<authorurl>https://kittmedia.com</authorurl>
+	</authorinformation>
+	
+	<requiredpackages>
+		<requiredpackage minversion="3.1.0">com.woltlab.wcf</requiredpackage>
+		<requiredpackage minversion="3.1.0">com.woltlab.wcf.conversation</requiredpackage>
+	</requiredpackages>
+	
+	<excludedpackages>
+		<excludedpackage version="6.0.0 Alpha 1">com.woltlab.wcf</excludedpackage>
+	</excludedpackages>
+	
+	<instructions type="install">
+		<!-- configuration -->
+		<instruction type="eventListener" />
+		<instruction type="language" />
+		<instruction type="option" />
+		
+		<!-- files -->
+		<instruction type="file" />
+	</instructions>
+</package>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="https://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.woltlab.com https://www.woltlab.com/XSD/tornado/option.xsd">
+	<import>
+		<categories>
+			<!-- general -->
+			<category name="general.sentry">
+				<parent>general</parent>
+			</category>
+			<!-- /general -->
+		</categories>
+		<options>
+			<!-- general.sentry -->
+			<option name="sentry_dsn">
+				<categoryname>general.sentry</categoryname>
+				<optiontype>text</optiontype>
+			</option>
+			<option name="sentry_env">
+				<categoryname>general.sentry</categoryname>
+				<optiontype>text</optiontype>
+				<defaultvalue><![CDATA[production]]></defaultvalue>
+			</option>
+			<option name="sentry_include_user_context">
+				<categoryname>general.sentry</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>1</defaultvalue>
+			</option>
+			<!-- /general.sentry -->
+		</options>
+	</import>
+</data>

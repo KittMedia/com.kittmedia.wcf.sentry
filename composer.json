@@ -1,6 +1,6 @@
 {
     "config": {
-        "vendor-dir": "files/system/api/sentry"
+        "vendor-dir": "files/lib/system/api/sentry"
     },
     "require": {
         "sentry/sentry": "^2.3",

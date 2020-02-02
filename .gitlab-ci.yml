@@ -1,0 +1,27 @@
+before_script:
+    - git clone --branch=master --depth=1 --quiet git@git.kittmedia.com:kittmedia-productions/wcf-buildscripts.git
+    - chmod +x wcf-buildscripts/*.sh
+
+stages:
+    - requirements
+    - package
+    - application
+
+variables:
+    PACKAGE_NAME: "com.kittmedia.wcf.sentry"
+
+create_package:
+    stage: package
+    
+    script:
+    - cd wcf-buildscripts
+    - ./package.sh $PACKAGE_NAME
+    - cd ..
+    - cp $PACKAGE_NAME.tar.gz /home/gitlab-runner/temp
+    
+    only:
+    - master
+    
+    artifacts:
+        paths:
+        - $PACKAGE_NAME.*

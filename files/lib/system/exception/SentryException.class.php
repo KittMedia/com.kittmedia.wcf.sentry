@@ -82,6 +82,14 @@ class SentryException extends Exception implements IParameterizedEventListener {
 	 * Handle any exception and log them into Sentry.
 	 */
 	public function handleException($exception) {
+		// exclude certain generic exceptions
+		if (
+			$exception instanceof PermissionDeniedException
+			|| $exception instanceof NamedUserException
+		) {
+			throw new $exception;
+		}
+		
 		Sentry\captureException($exception);
 		
 		$this->rethrow = $exception;

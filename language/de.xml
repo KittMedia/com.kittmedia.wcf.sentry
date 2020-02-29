@@ -6,5 +6,6 @@
 		<item name="wcf.acp.option.sentry_env"><![CDATA[Umgebung]]></item>
 		<item name="wcf.acp.option.sentry_include_user_context"><![CDATA[Benutzer-Kontext übertragen]]></item>
 		<item name="wcf.acp.option.sentry_include_user_context.description"><![CDATA[Kann sensible Daten beinhalten.]]></item>
+		<item name="wcf.acp.option.sentry_log_by_core"><![CDATA[Fehler auch in der WoltLab Suite protokollieren]]></item>
 	</category>
 </language>

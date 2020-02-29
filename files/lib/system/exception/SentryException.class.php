@@ -6,9 +6,12 @@ use wcf\system\event\listener\IParameterizedEventListener;
 use wcf\system\WCF;
 use function defined;
 use function set_exception_handler;
+use function wcf\functions\exception\logThrowable;
+use function wcf\functions\exception\printThrowable;
 use const SENTRY_DSN;
 use const SENTRY_ENV;
 use const SENTRY_INCLUDE_USER_CONTEXT;
+use const SENTRY_LOG_BY_CORE;
 use const WCF_VERSION;
 
 /**
@@ -64,7 +67,11 @@ class SentryException extends Exception implements IParameterizedEventListener {
 	 */
 	public function __destruct() {
 		if ($this->rethrow) {
-			throw $this->rethrow;
+			if (SENTRY_LOG_BY_CORE) {
+				logThrowable($this->rethrow);
+			}
+			
+			printThrowable($this->rethrow);
 		}
 	}
 	

@@ -5,8 +5,8 @@
 		<packagename language="de">Sentry-Integration</packagename>
 		<packagedescription><![CDATA[Connect your WoltLab Suite to a Sentry instance.]]></packagedescription>
 		<packagedescription language="de"><![CDATA[Verbinde deine WoltLab Suite mit einer Sentry-Instanz.]]></packagedescription>
-		<version>1.0.1</version>
-		<date>2020-02-29</date>
+		<version>1.0.2</version>
+		<date>2020-04-16</date>
 	</packageinformation>
 	
 	<authorinformation>
@@ -38,6 +38,11 @@
 		<instruction type="language" />
 		<instruction type="option" />
 		
+		<!-- files -->
+		<instruction type="file" />
+	</instructions>
+	
+	<instructions type="update" fromversion="1.0.1">
 		<!-- files -->
 		<instruction type="file" />
 	</instructions>

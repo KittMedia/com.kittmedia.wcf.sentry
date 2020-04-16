@@ -94,7 +94,8 @@ class SentryException extends Exception implements IParameterizedEventListener {
 			$exception instanceof PermissionDeniedException
 			|| $exception instanceof NamedUserException
 		) {
-			throw new $exception;
+			$exception->show();
+			exit;
 		}
 		
 		Sentry\captureException($exception);

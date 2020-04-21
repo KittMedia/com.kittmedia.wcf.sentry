@@ -24,11 +24,6 @@ use const WCF_VERSION;
  */
 class SentryException extends Exception implements IParameterizedEventListener {
 	/**
-	 * @var		\Exception
-	 */
-	private $rethrow;
-	
-	/**
 	 * SentryException constructor.
 	 */
 	public function __construct() {
@@ -63,19 +58,6 @@ class SentryException extends Exception implements IParameterizedEventListener {
 	}
 	
 	/**
-	 * Re-throw the exception.
-	 */
-	public function __destruct() {
-		if ($this->rethrow) {
-			if (SENTRY_LOG_BY_CORE) {
-				logThrowable($this->rethrow);
-			}
-			
-			printThrowable($this->rethrow);
-		}
-	}
-	
-	/**
 	 * Executes this action.
 	 * 
 	 * @param	object		$eventObj	Object firing the event
@@ -100,6 +82,10 @@ class SentryException extends Exception implements IParameterizedEventListener {
 		
 		Sentry\captureException($exception);
 		
-		$this->rethrow = $exception;
+		if (SENTRY_LOG_BY_CORE) {
+			logThrowable($exception);
+		}
+		
+		printThrowable($exception);
 	}
 }

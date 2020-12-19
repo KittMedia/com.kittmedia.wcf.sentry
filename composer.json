@@ -3,7 +3,7 @@
         "vendor-dir": "files/lib/system/api/sentry"
     },
     "require": {
-        "sentry/sentry": "^2.3",
+        "sentry/sentry": "^3.1",
         "php-http/httplug-pack": "^1.2"
     }
 }
